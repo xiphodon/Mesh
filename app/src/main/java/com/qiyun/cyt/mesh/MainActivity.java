@@ -10,6 +10,11 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
+/**
+ * 可揉动的图片
+ *
+ * Created by GuoChang on 16/9/20.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Bitmap bitmap;
@@ -42,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
             float bitmapHeight = bitmap.getHeight();
             int index = 0;
             for (int y = 0; y <= HEIGHT; y++) {
+                //矩阵的y对应位图的y坐标
                 float fy = bitmapHeight * y / HEIGHT;
                 for (int x = 0; x <= WIDTH; x++) {
+                    //矩阵的x对应位图的x坐标
                     float fx = bitmapWidth * x / WIDTH;
                     // 初始化orig、verts数组。 初始化后，orig、verts
                     // 两个数组均匀地保存了21 * 21个点的x,y坐标
